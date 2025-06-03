@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+backend-path = ["."] # Ensures setuptools can find its build tools if not in default location
+
+[project]
+name = "intuitive-vector" # The name of your package on PyPI
+version = "0.1.0"          # Initial version, can sync with __version__ in vector.py
+authors = [
+    { name = "Your Name", email = "you@example.com" }, # Replace with your details
+]
+description = "An intuitive and versatile vector class for numerical operations in Python."
+readme = "README.md"       # Points to your README file
+requires-python = ">=3.7"  # Minimum Python version your code supports
+license = { file = "LICENSE" } # Points to your LICENSE file
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License", # Example, choose one that suits you
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+# Add dependencies here if your vector.py had external ones (math is built-in)
+# dependencies = [
+#     "numpy>=1.20", # Example if you were using numpy
+# ]
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/intuitive-vector" # Example, replace
+"Bug Tracker" = "https://github.com/yourusername/intuitive-vector/issues" # Example
+
+# This section tells setuptools how to find your code.
+# package_dir maps the root of the importable package ("" for top-level) to a source directory.
+# py_modules specifies individual .py files to be included as top-level modules.
+[tool.setuptools]
+package_dir = {"" = "src"}
+py_modules = ["vector"]
