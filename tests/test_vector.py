@@ -11,6 +11,7 @@ import math
 # And you have run `pip install -e .` from the `intuitive_vector` root.
 from intuitive_vector import Vec, Number
 
+
 # Helper for float comparisons in vectors and lists
 def approx_equal_vec(v1: Vec, v2: Vec, tol=1e-9) -> bool:
     if v1.dim != v2.dim:
